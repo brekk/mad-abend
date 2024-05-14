@@ -1,0 +1,76 @@
+import { assertEquals, test } from "Test"
+
+import {
+  Bronze,
+  FAILURE_CASE,
+  Gold,
+  NUMBERS_AND_WORDS,
+  Numeric,
+  Silver,
+  Tin,
+  Word,
+} from "./ButterLists"
+
+
+
+test(
+  "NUMBERS_AND_WORDS",
+  () => assertEquals(
+    NUMBERS_AND_WORDS,
+    [
+      Numeric(Gold, 0_s),
+      Numeric(Gold, 1_s),
+      Numeric(Gold, 2_s),
+      Numeric(Silver, 0_s),
+      Numeric(Silver, 1_s),
+      Numeric(Silver, 2_s),
+      Numeric(Bronze, 0_s),
+      Numeric(Bronze, 1_s),
+      Numeric(Bronze, 2_s),
+      Word(Gold, "hey"),
+      Word(Gold, "there"),
+      Word(Gold, "spreadable"),
+      Word(Gold, "butter"),
+      Word(Silver, "hey"),
+      Word(Silver, "there"),
+      Word(Silver, "spreadable"),
+      Word(Silver, "butter"),
+      Word(Bronze, "hey"),
+      Word(Bronze, "there"),
+      Word(Bronze, "spreadable"),
+      Word(Bronze, "butter"),
+    ],
+  ),
+)
+
+test(
+  "FAILURE_CASE",
+  () => assertEquals(
+    FAILURE_CASE,
+    [
+      Numeric(Gold, 0_s),
+      Numeric(Gold, 1_s),
+      Numeric(Gold, 2_s),
+      Numeric(Silver, 0_s),
+      Numeric(Silver, 1_s),
+      Numeric(Silver, 2_s),
+      Numeric(Bronze, 0_s),
+      Numeric(Bronze, 1_s),
+      Numeric(Bronze, 2_s),
+      Word(Gold, "hey"),
+      Word(Gold, "there"),
+      Word(Gold, "spreadable"),
+      Word(Gold, "butter"),
+      Word(Silver, "hey"),
+      Word(Silver, "there"),
+      Word(Silver, "spreadable"),
+      Word(Silver, "butter"),
+      Word(Bronze, "hey"),
+      Word(Bronze, "there"),
+      Word(Bronze, "spreadable"),
+      Word(Bronze, "butter"),
+      Word(Tin, "shit"),
+      Word(Tin, "storm"),
+    ],
+  ),
+)

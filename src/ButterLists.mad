@@ -1,0 +1,28 @@
+import List from "List"
+
+
+
+export type Metal = Gold | Silver | Bronze | Tin
+export type Mixed = Numeric(Metal, Short) | Word(Metal, String)
+
+nums :: Metal -> List Mixed
+export nums = (m) => pipe(
+  List.range(0),
+  map(Numeric(m)),
+)(3)
+
+words :: Metal -> List Mixed
+export words = (m) => map(Word(m), ["hey", "there", "spreadable", "butter"])
+
+NUMBERS_AND_WORDS :: List Mixed
+export NUMBERS_AND_WORDS = [
+  ...nums(Gold),
+  ...nums(Silver),
+  ...nums(Bronze),
+  ...words(Gold),
+  ...words(Silver),
+  ...words(Bronze),
+]
+
+FAILURE_CASE :: List Mixed
+export FAILURE_CASE = [...NUMBERS_AND_WORDS, Word(Tin, "shit"), Word(Tin, "storm")]
