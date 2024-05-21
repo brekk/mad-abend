@@ -14,7 +14,6 @@ import {
 
 
 main = () => {
-  IO.pTrace("NUMBS", NUMBERS_AND_WORDS)
-
-  IO.pTrace("failfail", FAILURE_CASE)
+  IO.pTrace("NUMBS Should have no Tin", NUMBERS_AND_WORDS)
+  IO.pTrace("When FAILURE_CASE is printed though", FAILURE_CASE)
 }
