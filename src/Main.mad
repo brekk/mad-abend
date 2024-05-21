@@ -1,7 +1,20 @@
 import IO from "IO"
 
+import {
+  Bronze,
+  FAILURE_CASE,
+  Gold,
+  NUMBERS_AND_WORDS,
+  Numeric,
+  Silver,
+  Tin,
+  Word,
+} from "./ButterLists"
+
 
 
 main = () => {
-  IO.putLine("Hello World!")
+  IO.pTrace("NUMBS", NUMBERS_AND_WORDS)
+
+  IO.pTrace("failfail", FAILURE_CASE)
 }
